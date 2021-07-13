@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Real-time clock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-group">
+            <button class="tab" id="default" onclick="handleEvent(event, 'digital')">Digital</button>
+            <button class="tab" onclick="handleEvent(event, 'analog')">Analog</button>
+        </div>
+        <div class="time" id="digital"></div>
+        <div class="time" id="analog">
+            <div class="clock">
+                <div class="rotation-point"></div>
+                <div class="hour-hand"></div>
+                <div class="min-hand"></div>
+                <div class="second-hand"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

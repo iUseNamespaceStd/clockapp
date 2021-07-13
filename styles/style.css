@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.btn-group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn-group>button {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.active {
+    color: blue;
+}
+
+.time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+}
+
+.clock {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.hours {
+    position: relative;
+    font-size: 36px;
+}
+#hr12 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#hr9 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+#hr6 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#hr3 {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0%, -50%);
+}
+#hr1 {
+    position: absolute;
+    top: 35px;
+    left: 70%;
+}
+#hr2 {
+    position: absolute;
+    top: 120px;
+    left: 88%;
+}
+#hr4 {
+    position: absolute;
+    bottom: 120px;
+    left: 88%;
+}
+#hr5 {
+    position: absolute;
+    bottom: 35px;
+    left: 70%;
+}
+#hr7 {
+    position: absolute;
+    bottom: 35px;
+    right: 70%;
+}
+#hr8 {
+    position: absolute;
+    bottom: 120px;
+    right: 88%;
+}
+#hr10 {
+    position:absolute;
+    top: 120px;
+    right: 86%;
+}
+#hr11 {
+    position: absolute;
+    top: 35px;
+    right: 70%;
+}
+
+.rotation-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.hour-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 5px;
+    height: 150px;
+    background-color: #fff;
+}
+
+.min-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 5px;
+    height: 180px;
+    background-color: #fff;
+}
+
+.second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+    transform-origin: 100% 100%;
+    /* transform: rotate(120deg); */
+    animation: spin 60s linear infinite;
+    outline: 1px solid transparent;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
