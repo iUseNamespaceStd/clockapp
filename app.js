@@ -17,6 +17,8 @@ function handleEvent(e, tab) {
 // Set the default tab to display on load
 document.getElementById("default").click();
 
+// ***DIGITAL CLOCK***
+
 // Method to get the current time
 function getCurrentTime() {
     let dateTime = new Date();
@@ -41,21 +43,54 @@ function getCurrentTime() {
     document.querySelector('#digital').innerHTML = currentTime;
 }
 
-// Interval every 1s (1000ms)
+// Interval every second (1000ms)
 setInterval(getCurrentTime, 1000);
 
 // set a specific time - 02:05:30
 // dateTime.setHours(2, 5, 30) 
 
+// ***ANALOG CLOCK***
+
+/**
+ * Render the clock numbers on the clock
+ */
 function renderHours() {
     const clock = document.querySelector('.clock');
+
     for (let k = 1; k <= 12; k++) {
+        const wrapper = document.createElement("div");
+        wrapper.id = "wrapper" + [k];
         const hours = document.createElement("div");
         hours.className = "hours";
         hours.id = "hr" + [k];
         hours.innerHTML = k;
-        clock.append(hours);
+        wrapper.append(hours);
+        clock.append(wrapper);
     }
 }
 
-renderHours();
+/**
+ * Gets current time and set rotation for clock hands  
+ */
+function handRotation() {
+    const currentTime = new Date();
+    const hourHand = document.querySelector('.hour-hand');
+    const minuteHand = document.querySelector('.min-hand');
+    const secondHand = document.querySelector('.second-hand');
+
+    hourHand.style.transform = "rotate(" + ((currentTime.getHours() / 12) * 360) + "deg)";
+    minuteHand.style.transform = "rotate(" + ((currentTime.getMinutes() / 60) * 360) + "deg)";
+    secondHand.style.transform = "rotate(" + ((currentTime.getSeconds() / 60) * 360) + "deg)";
+}
+
+/**
+ * Analog clock init
+ */
+function analogInit() {
+    // Call method every second(1000ms)
+    setInterval(handRotation, 1000);
+    handRotation();
+    renderHours();
+}
+
+analogInit();

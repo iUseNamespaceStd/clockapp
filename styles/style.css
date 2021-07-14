@@ -43,72 +43,111 @@ body {
 }
 
 .hours {
-    position: relative;
+    /* position: relative; */
     font-size: 36px;
 }
-#hr12 {
+
+#wrapper12 {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translate(-50%, 0%);
+    /* transform: rotate(360deg); */
 }
-#hr9 {
+#wrapper1 {
     position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translate(0%, -50%);
+    top: 35px;
+    left: 70%;
+    transform: rotate(30deg);
 }
-#hr6 {
+#wrapper2 {
+    position: absolute;
+    top: 120px;
+    left: 88%;
+    transform: rotate(60deg);
+}
+#wrapper3 {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* transform: rotate(90deg); */
+    transform: translate(0%, -50%);
+
+}
+#wrapper4 {
+    position: absolute;
+    bottom: 120px;
+    left: 88%;
+    transform: rotate(120deg);
+}
+#wrapper5 {
+    position: absolute;
+    bottom: 35px;
+    left: 70%;
+    transform: rotate(150deg);
+}
+#wrapper6 {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0%);
+
 }
-#hr3 {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translate(0%, -50%);
-}
-#hr1 {
-    position: absolute;
-    top: 35px;
-    left: 70%;
-}
-#hr2 {
-    position: absolute;
-    top: 120px;
-    left: 88%;
-}
-#hr4 {
-    position: absolute;
-    bottom: 120px;
-    left: 88%;
-}
-#hr5 {
-    position: absolute;
-    bottom: 35px;
-    left: 70%;
-}
-#hr7 {
+#wrapper7 {
     position: absolute;
     bottom: 35px;
     right: 70%;
+    transform: rotate(210deg);
 }
-#hr8 {
+#wrapper8 {
     position: absolute;
     bottom: 120px;
     right: 88%;
+    transform: rotate(240deg);
 }
-#hr10 {
+#wrapper9 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+}
+#wrapper10 {
     position:absolute;
     top: 120px;
     right: 86%;
+    transform: rotate(300deg);
 }
-#hr11 {
+#wrapper11 {
     position: absolute;
     top: 35px;
     right: 70%;
+    transform: rotate(330deg);
+}
+
+#hr1 {
+    transform: rotate(-30deg);
+}
+#hr2 {
+    transform: rotate(-60deg);
+}
+#hr4 {
+    transform: rotate(-120deg);
+}
+#hr5 {
+    transform: rotate(-150deg);
+}
+#hr7 {
+    transform: rotate(-210deg);
+}
+#hr8 {
+    transform: rotate(-240deg);
+}
+#hr10 {
+    transform: rotate(-300deg);
+}
+#hr11 {
+    transform: rotate(-330deg);
 }
 
 .rotation-point {
@@ -126,9 +165,10 @@ body {
     position: absolute;
     bottom: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
     width: 5px;
-    height: 150px;
+    height: 120px;
     background-color: #fff;
 }
 
@@ -137,6 +177,7 @@ body {
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
+    transform-origin: 100% 100%;
     width: 5px;
     height: 180px;
     background-color: #fff;
@@ -147,16 +188,15 @@ body {
     bottom: 50%;
     left: 50%;
     width: 1px;
-    height: 200px;
+    height: 210px;
     background-color: #fff;
     transform-origin: 100% 100%;
-    /* transform: rotate(120deg); */
-    animation: spin 60s linear infinite;
+    /* animation: spin 60s linear infinite; */
     outline: 1px solid transparent;
 }
 
-@keyframes spin {
+/* @keyframes spin {
     100% {
         transform: rotate(360deg);
     }
-}
+} */
