@@ -164,7 +164,7 @@ body {
 .hour-hand {
     position: absolute;
     bottom: 50%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%);
     transform-origin: 100% 100%;
     width: 5px;
